@@ -1,5 +1,5 @@
 {
-  "name": "abstract-client",
+  "name": "@tributus/abstract-client",
   "version": "1.0.0",
   "description": "Abstract Server Connector",
   "main": "index.js",
