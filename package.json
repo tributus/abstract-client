@@ -1,0 +1,27 @@
+{
+  "name": "abstract-client",
+  "version": "1.0.0",
+  "description": "Abstract Server Connector",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tributus/abstract-client.git"
+  },
+  "keywords": [
+    "abstract",
+    "rz",
+    "thea"
+  ],
+  "author": "Anderson Norberto Santos <anderson.norberto@gmail.com>",
+  "license": "ISC",
+    "dependencies": {
+    "socket.io-client": "^4.3.2"
+  },
+  "bugs": {
+    "url": "https://github.com/tributus/abstract-client/issues"
+  },
+  "homepage": "https://github.com/tributus/abstract-client#readme"
+}
