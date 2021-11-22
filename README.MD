@@ -60,34 +60,68 @@ const defaultSettings = {
   }
 }
 ```
-```connectSocket```: Define if client should connect to event broker
+```connectSocket```: 
 
-```apiServerURI```: Base address of API Server
+Define if client should connect to event broker
 
-```eventBrokerURI```: Base address of Event Broker Server
+```apiServerURI```: 
 
-```auth```: Authentication options
+Base address of API Server
 
->>```auth.authServerURI```: Base address of Authentication Server
+```eventBrokerURI```: 
 
->>```auth.authServerURI```: Base address of Authentication Server
+Base address of Event Broker Server
 
->>```auth.autoRefreshToken```: Define if security token shoud auto refresh before it expires
+## ```auth```: 
 
->>```auth.credentials```: Credential data
+Authentication options
 
-```apiClientSettings```: Api Client specific options
+```auth.authServerURI```: 
 
->>```apiClientSettings.onAuthenticationError```: Method that should be invoked in case of authentication error. If no method is provided, the error will be printed on console
+Base address of Authentication Server
 
-```socketSettings```: Event Broker Client specific options
+```auth.authServerURI```: 
 
->>```socketSettings.reconnectionDelayMax```: The maximum delay between two reconnection attempts. Each attempt increases the reconnection delay by 2x.
->>```socketSettings.transports```: The low-level connection to the Socket.IO server can either be established with:
->>> - HTTP long-polling: successive HTTP requests (POST for writing, GET for reading)
->>> - WebSocket
->>```socketSettings.onError```:Method that should be invoked in case of socket general error. If no method is provided, the error will be printed on console
+Base address of Authentication Server
 
->>```socketSettings.onConnectError```:Method that should be invoked in case of socket connection error. If no method is provided, the error will be printed on console
+```auth.autoRefreshToken```: 
 
->>```socketSettings.onConnect```:Method that should be invoked after socket connection success.
+Define if security token shoud auto refresh before it expires
+
+```auth.credentials```: 
+
+Credential data
+
+## ```apiClientSettings```: 
+
+Api Client specific options
+
+```apiClientSettings.onAuthenticationError```: 
+
+Method that should be invoked in case of authentication error. If no method is provided, the error will be printed on console
+
+## ```socketSettings```: 
+
+Event Broker Client specific options
+
+```socketSettings.reconnectionDelayMax```: 
+
+The maximum delay between two reconnection attempts. Each attempt increases the reconnection delay by 2x.
+
+```socketSettings.transports```: 
+
+The low-level connection to the Socket.IO server can either be established with:
+- HTTP long-polling: successive HTTP requests (POST for writing, GET for reading)
+- WebSocket
+
+```socketSettings.onError```:
+
+Method that should be invoked in case of socket general error. If no method is provided, the error will be printed on console
+
+```socketSettings.onConnectError```:
+
+Method that should be invoked in case of socket connection error. If no method is provided, the error will be printed on console
+
+```socketSettings.onConnect```:
+
+Method that should be invoked after socket connection success.
