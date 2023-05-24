@@ -64,6 +64,26 @@ module.exports = function(options) {
     }
     req.end();
   });
+
+  this.postFormData = (url, formData, requestHeaders) => new Promise((resolve, reject) => {
+    this.authenticate().then(authToken => {
+      const options = {
+        method: "POST",
+        url: url,
+        headers: requestHeaders,
+        formData: formData
+      };
+      options.headers = options.headers || {};
+      options.headers.Authorization =  `${authToken.token_type} ${authToken.access_token}`;
+      request(options, (error, response) => {
+        if (error) {
+          return reject(error);
+        }
+        return resolve(response);
+      });
+    }).catch(reject);
+  });
+
   const requestAuthToken = () => new Promise((resolve, reject) => {
     this.request(helpers.buildURL(options.auth.authServerURI, "/api/com.core.system/security/authenticate"),"POST", options.auth.credentials).then(token => {
       authToken = token;
