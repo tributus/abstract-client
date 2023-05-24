@@ -1,6 +1,6 @@
 {
   "name": "abstract-client",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Abstract Server Connector",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,8 @@
   ],
   "author": "Anderson Norberto Santos <anderson.norberto@gmail.com>",
   "license": "ISC",
-    "dependencies": {
+  "dependencies": {
+    "request": "^2.88.2",
     "socket.io-client": "^4.3.2"
   },
   "bugs": {

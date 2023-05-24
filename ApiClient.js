@@ -66,10 +66,11 @@ module.exports = function(options) {
   });
 
   this.postFormData = (url, formData, requestHeaders) => new Promise((resolve, reject) => {
+    const request = require("request");
     this.authenticate().then(authToken => {
       const options = {
         method: "POST",
-        url: url,
+        url: buildURL(url),
         headers: requestHeaders,
         formData: formData
       };

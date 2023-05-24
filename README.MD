@@ -1,6 +1,9 @@
 # Abstract Server Connector
 The Abstract Server connector allows clients to connect and use Abstract Server apis and event broker.
 
+# Setup
+Install via NPM: ```npm install git@github.com:tributus/abstract-client.git --save```
+
 ## Usage
 ```javascript
 const options = {
